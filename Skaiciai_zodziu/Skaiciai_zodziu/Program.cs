@@ -191,7 +191,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("devyniasdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "devyniasdešimt";
+                return "devyniasdešimt ";
             }
             if (number >= 80)
             {
@@ -199,7 +199,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("aštuoniasdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "aštuoniasdešimt";
+                return "aštuoniasdešimt ";
             }
             if (number >= 70)
             {
@@ -207,7 +207,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("septyniasdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "septyniasdešimt";
+                return "septyniasdešimt ";
             }
             if (number >= 60)
             {
@@ -215,7 +215,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("šešiasdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "šešiasdešimt";
+                return "šešiasdešimt ";
             }
             if (number >= 50)
             {
@@ -223,7 +223,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("penkiasdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "penkiasdešimt";
+                return "penkiasdešimt ";
             }
             if (number >= 40)
             {
@@ -231,7 +231,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("keturiasdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "keturiasdešimt";
+                return "keturiasdešimt ";
             }
             if (number >= 30)
             {
@@ -239,7 +239,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("trisdešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "trisdešimt";
+                return "trisdešimt ";
             }
             if (number >= 20)
             {
@@ -247,7 +247,7 @@ namespace Skaiciai_zodziu
                 {
                     return ("dvidešimt " + GetNumberTextUpToTen(number % 10));
                 }
-                return "dvidešimt";
+                return "dvidešimt ";
             }
             else { return "Dešimčių apdorojimo į tekstą klaida. Ne numeris "; }
         }
@@ -339,26 +339,12 @@ namespace Skaiciai_zodziu
 
         private static bool CheckIfNegative(long number)
         {
-            if (number < 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (number < 0);
         }
 
         private static bool CheckIfSigned(char firstChar)
         {
-            if (firstChar == '-' || firstChar == '+')
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (firstChar == '-' || firstChar == '+');
         }
 
         private static bool CheckIfStringIsNumber(string numberCandidate)
